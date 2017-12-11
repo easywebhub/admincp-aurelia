@@ -13,8 +13,18 @@ Bluebird.config({ warnings: { wForgottenReturn: false } });
 export async function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
-    .developmentLogging();
-
+    .developmentLogging()
+    .plugin('aurelia-configuration', config => {
+      config.setEnvironment('development'); // Environment changes to development
+    });
+  //   .plugin('aurelia-configuration', config => {
+  //     config.setEnvironments({
+  //         development: ['localhost', 'dev.local'],
+  //         staging: ['staging.website.com', 'test.staging.website.com'],
+  //         production: ['website.com']
+  //     });
+  // });
+  
   // Uncomment the line below to enable animation.
   // aurelia.use.plugin(PLATFORM.moduleName('aurelia-animator-css'));
   // if the css animator is enabled, add swap-order="after" to all router-view elements
