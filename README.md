@@ -1,6 +1,6 @@
 ## EasyWeb Customization
 
-- thêm vào aurelia-configuration 
+- thêm vào aurelia-configuration, tham khảo https://ilikekillnerds.com/2015/09/aurelia-configuration/
  
 
 ## aurelia-skeleton-webpack
