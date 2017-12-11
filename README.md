@@ -1,8 +1,12 @@
 ## EasyWeb Customization
 
 - thêm vào aurelia-configuration, tham khảo https://ilikekillnerds.com/2015/09/aurelia-configuration/
- 
 
+- thêm LogManager, tham khảo http://www.sobell.net/aurelia-easy-logging-with-logmanager/
+- Aurelia plugin
+  - aurelia-dialog
+  - aurelia-validation
+  
 ## aurelia-skeleton-webpack
 
 ### Getting started
