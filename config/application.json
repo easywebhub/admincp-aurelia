@@ -1,0 +1,8 @@
+{
+    "name": "EasyWeb AdminCP",
+    "version": 1.0,
+    "api": {
+        "key": "12380198230918jlfkjsdfs",
+        "endpoint": "http://api.easywebhub.com"
+    }
+}
