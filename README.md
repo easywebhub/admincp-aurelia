@@ -6,6 +6,15 @@
 - Aurelia plugin
   - aurelia-dialog
   - aurelia-validation
+  - aurelia-bootstrap-datetimepicker, tham khảo https://github.com/ghiscoding/Aurelia-Bootstrap-Plugins
+
+- other plugins
+  - axios
+  - moment
+  - select2 
+  - sweetalert
+  - scriptjs
+
   
 ## aurelia-skeleton-webpack
 
