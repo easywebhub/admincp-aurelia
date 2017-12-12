@@ -1,60 +1,21 @@
 import { format } from "url";
+import { Router, RouterConfiguration } from "aurelia-router";
+import { PLATFORM } from "aurelia-pal";
 
 
 export class Sample {
-    
-    lbStandardDate : Date; //standard date for API Backend: loopback
-    //datetime picker
-    dateTimePicker : any = {
-        pickerOptions : {
-            format: 'YYYY-MM-DD'
-        },
-    }    
-    date1 : EWDateTimePicker = new EWDateTimePicker()
-    date2 : EWDateTimePicker = new EWDateTimePicker()
+    router: Router;
 
-    selectedProduct : Product;     
-    selectedProducts : Product[];     
-    
-    products: Product[]  = [
-        new Product(1, 'Motherboard'),
-        new Product(2, 'CPU'),
-        new Product(3, 'Memory')
-    ];
-    /**
-    * link http://aurelia.io/docs/binding/selects#select-number
-    * 
-    */
+    heading = 'Sample';
 
-    constructor(){
-        // this.dateTimePicker.dateEntered = new Date(2017,12,3);
-    }  
-    activate() {
-        this.dateTimePicker.dateEntered = new Date(2017,12,3);
+    configureRouter(config: RouterConfiguration, router: Router) {
+        config.map([
+            // { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('./welcome'), nav: true, title: 'Welcome' },
+            { route: ['','datetime'], name: 'datetime', moduleId: PLATFORM.moduleName('./datetime'), nav: true, title: 'DateTimePicker' },
+            { route: 'ew-select', name: 'ew-select', moduleId: PLATFORM.moduleName('./select'), nav: true, title: 'Select' }
+        ]);
+
+        this.router = router;
     }
-}    
-
-export class EWDateTimePicker {
-    date : Date;
-    options : {
-        format: 'DD-MM-YYYY'
-    }
-
-    constructor() {
-        this.date = new Date();    
-    }
-
-
-    getDate() :Date {
-        return new Date(this.date);    
-    }
-}
-
-export class Product {
-    id: number;
-    name: string;
-    constructor(id, name){
-        this.id = id;
-        this.name = name;    
-    }
+   
 }
