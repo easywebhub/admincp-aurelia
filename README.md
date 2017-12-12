@@ -32,6 +32,18 @@
     
 ```
   
+## Samples
+### Datetimepicker
+
+- sử dụng `model.bind` thay cho `value.bind` để lấy giá trị `Date()` tương thích với API backend (loopback)
+- tham khảo momentjs, https://momentjs.com/
+
+- options tiêu biểu
+```
+options.bind="{ format: 'MMM Do YY, h:mm:ss a' , locale: 'vi' }"  
+options.bind="{ format: 'MMMM Do YYYY, h:mm:ss a' , locale: 'vi' }"
+
+```
 ## aurelia-skeleton-webpack
 
 ### Getting started
