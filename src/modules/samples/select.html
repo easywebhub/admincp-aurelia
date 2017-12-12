@@ -26,7 +26,7 @@
                 <label class="col-sm-4 col-md-4 control-label">Selected id: ${selectedProduct.id} - name:${selectedProduct.name}</label>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 col-md-2 control-label">Select Multile</label>
+                <label class="col-sm-2 col-md-2 control-label">Aurelia Select (Multiple)</label>
                 <div class="col-sm-6 col-md-4">
                     <select multiple value.bind="selectedProducts" class="form-control">
                         <option repeat.for="product of products" model.bind="product">
@@ -40,7 +40,7 @@
     
             </div>
             <div class="form-group">
-                <label class="col-sm-2 col-md-2 control-label">Select Multile</label>
+                <label class="col-sm-2 col-md-2 control-label">Custome Select2 (Multiple)</label>
                 <div class="col-sm-6 col-md-4">
                     <select select2 multiple value.bind="selectedProducts" class="form-control">
                         <option repeat.for="product of products" model.bind="product">
