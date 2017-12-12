@@ -8,7 +8,6 @@ import { PLATFORM } from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
 import {LogManager} from "aurelia-framework";
 import {ConsoleAppender} from "aurelia-logging-console";
- 
 
 // remove out if you don't want a Promise polyfill (remove also from webpack.config.js)
 Bluebird.config({ warnings: { wForgottenReturn: false } });
@@ -21,6 +20,7 @@ export async function configure(aurelia: Aurelia) {
     config.setEnvironment('development'); // Environment changes to development
   })
   .plugin(PLATFORM.moduleName('aurelia-validation'))
+  .plugin(PLATFORM.moduleName('aurelia-bootstrap-datetimepicker'))
   .plugin(PLATFORM.moduleName('aurelia-dialog'), config => {
     config.useDefaults();
     config.settings.lock = true;
