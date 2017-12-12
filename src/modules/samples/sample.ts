@@ -12,7 +12,9 @@ export class Sample {
         config.map([
             // { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('./welcome'), nav: true, title: 'Welcome' },
             { route: ['','datetime'], name: 'datetime', moduleId: PLATFORM.moduleName('./datetime'), nav: true, title: 'DateTimePicker' },
-            { route: 'ew-select', name: 'ew-select', moduleId: PLATFORM.moduleName('./select'), nav: true, title: 'Select' }
+            { route: 'ew-select', name: 'ew-select', moduleId: PLATFORM.moduleName('./select'), nav: true, title: 'Select' },
+            { route: 'ew-editor', name: 'ew-editor', moduleId: PLATFORM.moduleName('./editor'), nav: true, title: 'Editor' },
+            { route: 'ew-dialog', name: 'ew-dialog', moduleId: PLATFORM.moduleName('./dialog'), nav: true, title: 'Dialog(Modal)' }
         ]);
 
         this.router = router;

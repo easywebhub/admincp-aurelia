@@ -1,6 +1,5 @@
 
-
-export class EwEditor {
+export class EwDialog {
 
     constructor(){
 
