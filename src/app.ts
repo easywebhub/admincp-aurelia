@@ -10,6 +10,7 @@ export class App {
     config.map([
       { route: ['', 'welcome'], name: 'welcome',      moduleId: PLATFORM.moduleName('./modules/common/welcome'),      nav: true, title: 'Welcome' },
       { route: 'users',         name: 'users',        moduleId: PLATFORM.moduleName('./modules/users/users'),        nav: true, title: 'Github Users' },
+      { route: 'sample',         name: 'sample',        moduleId: PLATFORM.moduleName('./modules/samples/sample'),        nav: true, title: 'EasyWeb Sample' },
       { route: 'child-router',  name: 'child-router', moduleId: PLATFORM.moduleName('./modules/common/child-router'), nav: true, title: 'Child Router' },
     ]);
 

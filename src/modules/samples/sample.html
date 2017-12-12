@@ -1,0 +1,16 @@
+<template>
+    <section class="au-animate container">
+      <h2>DateTimePicker</h2>
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <abp-datetime-picker value.bind="datetimepicker.dateEntered" options.bind="{ format: 'YYYY-MM-DD' }"></abp-datetime-picker>
+        </div>                
+        <div class="col-md-6 col-sm-6">
+            <abp-datetime-picker value.bind="datetimepicker.dateEntered" options.bind="{ format: 'DD-MM-YYYY' }"></abp-datetime-picker>
+        </div>  
+        
+        <div class="col-md6">${datetimepicker.dateEntered}</div>        
+      </div>
+    </section>
+  </template>
+  
