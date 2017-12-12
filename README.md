@@ -12,9 +12,25 @@
   - axios
   - moment
   - select2 
-  - sweetalert
   - scriptjs
+  - ckeditor
+  - sweetalert
 
+- cấu trúc source code
+
+```
+/src
+|__modules
+    |__common
+    |__users
+    |__...
+|__resources
+    |__base
+    |__valueconverter
+    |__...
+|__helpers
+    
+```
   
 ## aurelia-skeleton-webpack
 

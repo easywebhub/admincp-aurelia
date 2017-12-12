@@ -1,4 +1,5 @@
-import {ChildRouter} from 'child-router';
+import { ChildRouter } from "modules/common/child-router";
+
 
 class RouterStub {
   routes;
