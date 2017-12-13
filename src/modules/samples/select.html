@@ -1,7 +1,10 @@
 <template>
+    <!-- <require from="../../resources/select2/index"></require>     -->
     <section>
         <div class="form-horizontal">
-            <h3>Aurelia Select, <a href="http://aurelia.io/docs/binding/selects">Link tham khảo</a></h3>
+            <h3>Aurelia Select,
+                <a href="http://aurelia.io/docs/binding/selects">Link tham khảo</a>
+            </h3>
             <div class="form-group">
                 <label class="col-sm-2 col-md-2 control-label">Select Single</label>
                 <div class="col-sm-6 col-md-4">
@@ -14,7 +17,7 @@
                 </div>
                 <label class="col-sm-4 col-md-4 control-label">Selected id: ${selectedProduct.id} - name:${selectedProduct.name}</label>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="col-sm-2 col-md-2 control-label">Aurelia Select (Multiple)</label>
                 <div class="col-sm-6 col-md-4">
                     <select multiple value.bind="selectedProducts" class="form-control">
@@ -27,10 +30,10 @@
                     <li repeat.for="product of selectedProducts">${product.id} - ${product.name}</li>
                 </ul>
                 
-            </div>
-            <h3>Custom Select2 (Bugs, need to fix)</h3>
+            </div> -->
+            <h3>Custom Select2</h3>
             <div class="form-group">
-                <label class="col-sm-2 col-md-2 control-label">Custom Select2 (Multiple)</label>
+                <label class="col-sm-2 col-md-2 control-label">Select2 Multiple</label>
                 <div class="col-sm-6 col-md-4">
                     <select select2 multiple value.bind="selectedProducts" class="form-control">
                         <option repeat.for="product of products" model.bind="product">
@@ -39,9 +42,6 @@
                     </select>
                 </div>
                 <label>Count ${selectedProducts.length}</label>
-                <ul>
-                    <li repeat.for="product of selectedProducts"></li>
-                </ul>
             </div>
         </div>
     </section>
