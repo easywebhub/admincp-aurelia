@@ -10,11 +10,7 @@ export class Select2CustomAttribute {
   constructor(private element) {
   }
   async attached() {
-    // PLATFORM.global.$(this.element).select2()
-    //   .on('select2:select', (e) => {
-    //     this.element.dispatchEvent(new Event('change'));
-    //   })
-
+   
       var el = PLATFORM.global.$(this.element);
       var sel = el.select2();
   
