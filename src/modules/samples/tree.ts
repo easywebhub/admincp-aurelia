@@ -25,7 +25,7 @@ export class EwTree {
     console.groupEnd();
   }
   public jstreeConfig = {
-    plugins: ["dnd"],
+    plugins: ["dnd", "wholerow", "checkbox"],
     core: {
       check_callback: function (operation, node, node_parent, node_position, more) {
         // operation can be 'create_node', 'rename_node', 'delete_node', 'move_node' or 'copy_node'
