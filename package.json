@@ -105,6 +105,7 @@
     "aurelia-fetch-client": "1.1.2",
     "aurelia-framework": "1.1.4",
     "aurelia-history-browser": "1.0.0",
+    "aurelia-jstree": "^1.0.1",
     "aurelia-loader-webpack": "2.1.0",
     "aurelia-logging-console": "^1.0.0",
     "aurelia-pal-browser": "1.2.1",
@@ -120,7 +121,8 @@
     "bootstrap": "3.3.7",
     "font-awesome": "4.7.0",
     "isomorphic-fetch": "2.2.1",
-    "jquery": "3.2.1",
+    "jquery": "^3.2.1",
+    "jstree": "^3.3.4",
     "moment": "^2.19.4",
     "scriptjs": "^2.5.8",
     "select2": "^4.0.6-rc.1"

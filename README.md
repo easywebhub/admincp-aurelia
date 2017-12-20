@@ -7,6 +7,7 @@
   - aurelia-dialog
   - aurelia-validation
   - aurelia-bootstrap-datetimepicker, tham khảo https://github.com/ghiscoding/Aurelia-Bootstrap-Plugins
+  - jstree aurelia-jstree, tham khảo https://www.npmjs.com/package/aurelia-jstree
 
 - other plugins
   - axios
@@ -19,6 +20,8 @@
 - cấu trúc source code
 
 ```
+/config
+    |__config.json
 /src
 |__modules
     |__common

@@ -8,6 +8,7 @@ import { PLATFORM } from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
 import {LogManager} from "aurelia-framework";
 import {ConsoleAppender} from "aurelia-logging-console";
+import "jstree"; // <------------ MAKE SURE TO IMPORT JSTREE
 
 // remove out if you don't want a Promise polyfill (remove also from webpack.config.js)
 Bluebird.config({ warnings: { wForgottenReturn: false } });
@@ -28,6 +29,7 @@ export async function configure(aurelia: Aurelia) {
     config.settings.startingZIndex = 9999;
     config.settings.enableEscClose = true;
   })
+  .plugin(PLATFORM.moduleName("aurelia-jstree"))  // <----- REGISTER THE PLUGIN
   .feature(PLATFORM.moduleName('resources/index'))
   //   .plugin('aurelia-configuration', config => {
     //     config.setEnvironments({
