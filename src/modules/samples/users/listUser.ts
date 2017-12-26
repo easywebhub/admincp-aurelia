@@ -3,6 +3,7 @@ import { User } from 'modules/samples/users/models/user';
 import { DialogService } from 'aurelia-dialog';
 import { UserDetail } from 'modules/samples/users/dialogs/userDetail';
 import { inject } from 'aurelia-framework';
+import { logger } from 'modules/samples/users/logger';
 
 const $ = PLATFORM.global.$
 
@@ -18,16 +19,15 @@ export class ListUser {
 
   async runCreate() {
     this.selectedItem = new User();
+    logger.debug("runCreate()", this.selectedItem);
     this.dialogService.open({ viewModel: UserDetail, model: this.selectedItem }).whenClosed((result) => {
-        if (!result.wasCancelled) {
-            this.selectedItem = result.output;
-        } else {
-  //          logger.info("Cancel");
+      if (!result.wasCancelled) {
+        this.selectedItem = result.output;
+      } else {
+            logger.debug("runCreate()", this.selectedItem);
+            logger.info("Cancel");
         }
     });
-
-//    logger.info("runCreate()", this.selectedItem)
-    //this.userSrv.Post(this.selectedItem)
 }
 
   

@@ -3,6 +3,8 @@
 - thêm vào aurelia-configuration, tham khảo https://ilikekillnerds.com/2015/09/aurelia-configuration/
 
 - thêm LogManager, tham khảo http://www.sobell.net/aurelia-easy-logging-with-logmanager/
+  - show `Debug` level on Chrome, https://user-images.githubusercontent.com/2018660/29061060-ef4a2666-7c24-11e7-8b2d-1e2708ea6215.png
+  
 - Aurelia plugin
   - aurelia-dialog
   - aurelia-validation
