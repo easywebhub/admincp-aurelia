@@ -13,6 +13,9 @@
     - https://www.npmjs.com/package/aurelia-jstree, 
     - https://www.jstree.com/
 
+  - aurelia-v-grid: https://vegarringdal.gitbooks.io/dev-rebuild/content/
+    
+
 - other plugins
   - axios
   - moment
