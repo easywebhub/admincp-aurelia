@@ -15,5 +15,37 @@ export class App {
     ]);
 
     this.router = router;
+    
+  }
+  attached() {
+    var script = document.createElement("script");
+    script.src = "assets/vendors/base/vendors.bundle.js";
+    script.type = "text/javascript";
+    document.getElementsByTagName("body")[0].appendChild(script);
+
+    var s2 = document.createElement("script");
+    s2.src = "assets/demo/demo2/base/scripts.bundle.js";
+    s2.type = "text/javascript";
+    document.getElementsByTagName("body")[0].appendChild(s2);
+    
+    var s3 = document.createElement("script");
+    s3.src = "assets/vendors/custom/fullcalendar/fullcalendar.bundle.js";
+    s3.type = "text/javascript";
+    document.getElementsByTagName("body")[0].appendChild(s3);
+    
+    var s4 = document.createElement("script");
+    s4.src = "assets/app/js/dashboard.js";
+    s4.type = "text/javascript";
+    document.getElementsByTagName("body")[0].appendChild(s4);
+    
+      // <!--begin::Base Scripts -->
+      // <script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+      // <script src="assets/demo/demo2/base/scripts.bundle.js" type="text/javascript"></script>
+      // <!--end::Base Scripts -->
+      // <!--begin::Page Vendors -->
+      // <script src="assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+      // <!--end::Page Vendors -->
+      // <!--begin::Page Snippets -->
+      // <script src="assets/app/js/dashboard.js" type="text/javascript"></script>
   }
 }
