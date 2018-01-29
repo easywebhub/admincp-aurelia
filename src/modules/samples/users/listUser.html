@@ -1,7 +1,92 @@
 <template>
-    <div class="panel panel-default">
-        <div class="panel-body">
-          <button click.delegate="runCreate()" class="btn btn-default btn-sm m-b-10  m-t-5 text-primary" type="button" data-toggle="modal"><i class="fa fa-file"></i> Create New Dialog</button>
+    <div class="m-content">
+        <!--begin::Portlet-->
+        <div class="m-portlet">
+          <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+              <div class="m-portlet__head-title">
+                <h3 class="m-portlet__head-text">
+                  Modal Demos
+                </h3>
+              </div>
+            </div>
           </div>
+          <div class="m-portlet__body">
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td style="width: 30%">
+                    Basic demo
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_modal_1">
+                      Launch Modal
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">
+                    Scrollable fixed content
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-metal" data-toggle="modal" data-target="#m_modal_1_2">
+                      Launch Modal
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">
+                    Scrolling long content
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-brand" data-toggle="modal" data-target="#m_modal_2">
+                      Launch Modal
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">
+                    Tooltips and popovers
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#m_modal_3">
+                      Launch Modal
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">
+                    Large modal
+                  </td>
+                  <td>
+                    <button click.delegate="runCreate()" type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4">
+                      Launch Modal
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">
+                    Small modal
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#m_modal_5">
+                      Launch Modal
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">
+                    Vertically centered
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-focus" data-toggle="modal" data-target="#m_modal_6">
+                      Launch Modal
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
     </div>
 </template>
