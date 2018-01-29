@@ -16,7 +16,7 @@
                   aria-expanded="true">
                   <a href="#" class="dropdown-toggle m-dropdown__toggle btn btn-outline-metal m-btn  m-btn--icon m-btn--pill">
                     <span>
-                      Dashboard 123
+                      Dashboard
                     </span>
                   </a>
                   <div class="m-dropdown__wrapper">
@@ -503,21 +503,32 @@
             </button>
             <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-dark m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light ">
               <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-                <li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
-                  <a href="index.html" class="m-menu__link ">
-                    <span class="m-menu__item-here"></span>
-                    <span class="m-menu__link-text">
-                      Dashboard
-                    </span>
-                  </a>
-                </li> 
-                <li repeat.for="row of router.navigation" class="m-menu__item ${row.isActive ? 'm-menu__item--active' : ''}" aria-haspopup="true">
-                  <a href.bind="row.href" class="m-menu__link ">
+                <li repeat.for="row of router.navigation"  data-menu-submenu-toggle="click" class="m-menu__item ${row.isActive ? 'm-menu__item--active' : ''}" aria-haspopup="true">
+                  <a href="#" class="m-menu__link m-menu__toggle">
                     <span class="m-menu__item-here"></span>
                     <span class="m-menu__link-text">
                       ${row.title}
                     </span>
+                    <i class="m-menu__hor-arrow la la-angle-down"></i>
+                    <i class="m-menu__ver-arrow la la-angle-right"></i>
                   </a>
+                  <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+                    <span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                    <ul class="m-menu__subnav">
+                      <li repeat.for="menu of row.settings.nav" class="m-menu__item " aria-haspopup="true">
+                        <a href.bind="menu.href" class="m-menu__link ">
+                          <i class="m-menu__link-icon flaticon-diagram"></i>
+                          <span class="m-menu__link-title">
+                            <span class="m-menu__link-wrap">
+                              <span class="m-menu__link-text">
+                                ${menu.title}
+                              </span>
+                            </span>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" data-menu-submenu-toggle="click" aria-haspopup="true">
                   <a href="#" class="m-menu__link m-menu__toggle">

@@ -16,6 +16,7 @@ export class Sample {
             { route: 'ew-editor', name: 'ew-editor', moduleId: PLATFORM.moduleName('./editor'), nav: true, title: 'Editor' },
             // { route: 'ew-dialog', name: 'ew-dialog', moduleId: PLATFORM.moduleName('./dialog'), nav: true, title: 'Dialog(Modal)' },
             { route: 'listUser', name: 'listUser', moduleId: PLATFORM.moduleName('./users/listUser'), nav: true, title: 'EasyWeb Users' },
+            { route: 'gmaps', name: 'gmaps', moduleId: PLATFORM.moduleName('./googlemaps'), nav: true, title: 'Google Maps' },
             { route: 'tree', name: 'ew-tree', moduleId: PLATFORM.moduleName('./tree'), nav: true, title: 'Tree View' },
         ]);
 
