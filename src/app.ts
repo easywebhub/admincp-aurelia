@@ -46,14 +46,14 @@ export class App {
       })
     }
 
-    loadJs('assets/vendors/base/vendors.bundle.js').then(() => {
-      loadJs('assets/demo/demo2/base/scripts.bundle.js').then(() => {
-        loadJs('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js').then(() => {
-          loadJs('assets/app/js/dashboard.js').then(() => {
-          });
-        });
-      });
-    });
+    // loadJs('assets/vendors/base/vendors.bundle.js').then(() => {
+    //   loadJs('assets/demo/demo2/base/scripts.bundle.js').then(() => {
+    //     loadJs('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js').then(() => {
+    //       loadJs('assets/app/js/dashboard.js').then(() => {
+    //       });
+    //     });
+    //   });
+    // });
     loadJs('assets/snippets/pages/user/login.js'); 
       // <!--begin::Base Scripts -->
       // <script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
