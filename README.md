@@ -76,6 +76,16 @@ From the project folder, execute the following commands:
 npm install # or: yarn install
 ```
 
+```
+npm start -- build
+```
+
+### Copy vào thư mục /dist
+
+- copy các thư mục cần thiết vào `/dist` 
+  - `/config`
+  - `/src/assets`
+
 This will install all required dependencies, including a local version of Webpack that is going to
 build and bundle the app. There is no need to install Webpack globally. 
 
