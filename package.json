@@ -54,6 +54,7 @@
     "mapCoverage": true
   },
   "devDependencies": {
+    "@timkendrick/monaco-editor-loader": "0.0.6",
     "@types/jest": "20.0.4",
     "@types/lodash": "4.14.69",
     "@types/node": "8.0.14",
@@ -98,6 +99,8 @@
     "webpack-dev-server": "2.5.1"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^1.0.0-alpha.2",
+    "@timkendrick/monaco-editor": "0.0.7",
     "aurelia-bootstrap-datetimepicker": "^1.0.11",
     "aurelia-bootstrapper": "2.1.1",
     "aurelia-configuration": "^1.0.17",
@@ -125,6 +128,7 @@
     "jquery": "^3.2.1",
     "jstree": "^3.3.4",
     "moment": "^2.19.4",
+    "monaco-editor": "^0.10.1",
     "scriptjs": "^2.5.8",
     "select2": "^4.0.6-rc.1"
   }

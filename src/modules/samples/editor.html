@@ -1,10 +1,23 @@
 <template>
-    <h1>Comming Soon!</h1>  
-    <section>
-        <h3>Monaco Editor </h3>
-    </section>
+  <!-- https://stackoverflow.com/questions/46559354/how-to-set-the-height-of-ckeditor-5-classic-editor   -->
+  <style>
+    .ck-editor__editable {
+      min-height: 400px;  
+    }
+  </style>
+  <h1>Comming Soon!</h1>
+  <section>
+    <h3>Monaco Editor </h3>
+    <!-- <div ref="editorHost" id="container" style="height:100%;"></div> -->
+    <div monacoeditor="id.bind:mncId" value.bind="monacoEditorValue" style="height:200px;border: solid 1px black" ></div>
+    <div style="height:200px;"></div>
+  </section>
 
-    <section>
-      <h3>CKeditor 5</h3>  
-    </section>      
+  <section>
+    <h3>CKeditor 5</h3>
+    <div>
+      <textarea ckeditor5="id.bind: ckId" value.bind="ckEditorValue"></textarea>
+    </div>
+    <button click.delegate="log()">test binding</button>
+  </section>
 </template>

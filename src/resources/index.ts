@@ -14,6 +14,8 @@ export function configure(config: FrameworkConfiguration) {
         PLATFORM.moduleName('./table/au-table-sort'),
         PLATFORM.moduleName('./loader/loader'),
         PLATFORM.moduleName('./editor/ckeditor'),
+        PLATFORM.moduleName('./editor/ckeditor5'),
+        PLATFORM.moduleName('./editor/monacoeditor'),
         PLATFORM.moduleName('./valueconverter/dateformat'),
         PLATFORM.moduleName('./switch/switchery'),
         PLATFORM.moduleName('./uploader/uploader')
