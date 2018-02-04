@@ -26,35 +26,17 @@ export class EwEditor {
   ckEditorValue = 'I am from viewmodel';
   log() {
     console.log('ck5', this.ckEditorValue)  
+  }
+  
+  getMonaco() {
     console.log('monaco', this.monacoEditorValue)  
-
-    this.monacoEditorValue = "clear value";
+  }  
+  setValue() {
+      
   }
   monacoEditorValue = 'Hello World!';
   attach() {
-
    
-    // var onGotAmdLoader = () => {
-    //   // Load monaco
-    //   (<any>window).require(['vs/editor/editor.main'], () => {
-    //     this.initMonaco();
-    //   });
-    // };
-
-    // loadJs('vs/loader.js').then( _ => {
-    //   onGotAmdLoader();
-    // })    
-    
-    // // Load AMD loader if necessary
-    // if (!(<any>window).require) {
-    //   var loaderScript = document.createElement('script');
-    //   loaderScript.type = 'text/javascript';
-    //   loaderScript.src = 'vs/loader.js';
-    //   loaderScript.addEventListener('load', onGotAmdLoader);
-    //   document.body.appendChild(loaderScript);
-    // } else {
-    //   onGotAmdLoader();
-    // }
   }
 
 }    

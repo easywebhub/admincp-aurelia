@@ -9,9 +9,9 @@ export class Admin {
     config.title = 'EasyWeb';
     config.map([
       { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('./common/welcome'), nav:true, title: 'Dashboard' },
-      // { route: 'users',         name: 'users',        moduleId: PLATFORM.moduleName('./modules/users/users'),        nav: true, title: 'Github Users' },
+      { route: 'users',         name: 'users',  moduleId: PLATFORM.moduleName('./users/users'),   nav: true, title: 'Users' },
       {
-        route: 'sample', name: 'sample', moduleId: PLATFORM.moduleName('./samples/sample'), nav: true, title: 'Case Study', settings: {
+        route: 'sample', name: 'sample', moduleId: PLATFORM.moduleName('./samples/sample'), nav: true, title: 'Sample', settings: {
           nav: [
             { href: 'admin/sample/datetime', title: 'DateTimePicker' },
             // { route: 'ew-select', name: 'ew-select', moduleId: PLATFORM.moduleName('./samples/select'), nav: true, title: 'Select' },

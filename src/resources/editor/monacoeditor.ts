@@ -1,62 +1,28 @@
 import { PLATFORM } from 'aurelia-pal';
 import { bindable, bindingMode, inject, customAttribute } from 'aurelia-framework';
+
 @inject(Element)
 @customAttribute('monacoeditor')
-
 export class MonacoEditorAttribute {
+  @bindable({ defaultBindingMode: bindingMode.twoWay }) data;
+  @bindable options;  
+
   constructor(private element) {
   }
-  attached() {
-    // const monaco = require('@timkendrick/monaco-editor');
-    // monaco.editor.create(this.element, {
-    //   value: "function hello() {\n\talert('Hello world!');\n}",
-    //   language: "javascript"
-    // })
-    //   .then(editor => {
-    //     console.log('monaco', editor)
-    //   });
-    // this.loadJs('vs/loader.js')
-    // .then( _ => {
-    //    console.log('monaco')
-    //    this.onGotAmdLoader();
-    // })    
-    // .catch(err => {
-    //   console.log('err', err)  
-    // })
 
-    this.initMonaco();
-
-    // var $s = require('scriptjs');
-    // $s('../../../assets/plugins/ckeditor/ckeditor.js', () => {
-    //     PLATFORM.global.CKEDITOR.replace(this.element).on('change', (e) => {
-    //         this.element.value = e.editor.getData()
-    //         this.element.dispatchEvent(new Event('change'));
-    //     });
-    // });
+  dataChanged(newValue, oldValue) {
+  //  console.log('new: ', newValue)  
+    this.data = newValue; 
+  }  
+  
+  optionsChanged(newValue, oldValue) {
+    this.options = newValue; 
+  } 
+  binding() {
 
   }
-  onGotAmdLoader = () => {
-    // Load monaco
+  attached() {
     this.initMonaco();
-    // (<any>window).require(['vs/editor/editor.main'], () => {
-    //   this.initMonaco();
-    // });
-  };
-
-  loadJs(file) {
-    return new Promise(function (resolve, reject) {
-      var script = document.createElement('script');
-      script.src = file;
-      //script.addEventListener('load', this.onGotAmdLoader());
-      document.body.appendChild(script);
-
-      script.onload = function () {
-        resolve()
-      }
-      script.onerror = function () {
-        reject()
-      }
-    })
   }
 
   editor: any; 
@@ -66,16 +32,47 @@ export class MonacoEditorAttribute {
     const monaco = require('@timkendrick/monaco-editor');
     console.log('initMonaco');
     this.editor = monaco.editor.create(this.element, {
-      value: this.element.value,
-      language: 'javascript'
+      value: this.data,
+      language: 'javascript',
+      theme: "vs-dark",
+      scrollbar: { //https://microsoft.github.io/monaco-editor/playground.html#customizing-the-appearence-scrollbars
+        // Subtle shadows to the left & top. Defaults to true.
+        useShadows: false,
+    
+        // Render vertical arrows. Defaults to false.
+        verticalHasArrows: true,
+        // Render horizontal arrows. Defaults to false.
+        horizontalHasArrows: true,
+    
+        // Render vertical scrollbar.
+        // Accepted values: 'auto', 'visible', 'hidden'.
+        // Defaults to 'auto'
+        vertical: 'visible',
+        // Render horizontal scrollbar.
+        // Accepted values: 'auto', 'visible', 'hidden'.
+        // Defaults to 'auto'
+        horizontal: 'visible',
+    
+        verticalScrollbarSize: 17,
+        horizontalScrollbarSize: 17,
+        arrowSize: 30
+      }
     });
-    let that = this;
-    this.editor.onDidChangeModelContent((e)=> {
-      that.element.value = that.editor.getValue()
-        console.log(that.editor.getValue())
-        console.log(that.element.value)
-        that.element.dispatchEvent(new Event('change'));
-    });
+    if(typeof this.editor!="undefined") {
+    
+      //https://microsoft.github.io/monaco-editor/playground.html#interacting-with-the-editor-listening-to-key-events      
+      var myBinding = this.editor.addCommand(monaco.KeyCode.F1, function() {
+        alert('F1 pressed!');
+      });  
+
+      //      
+      this.editor.onDidChangeModelContent((e)=> {
+          this.data = this.editor.getValue()
+       //   console.log(this.editor.getValue())
+       //   console.log('data', this.data)
+          this.element.dispatchEvent(new Event('change'));
+      });
+    }
   }
   detached() { 
     this.destroyMonaco();   
