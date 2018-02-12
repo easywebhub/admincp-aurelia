@@ -49,6 +49,7 @@ export class Admin {
       loadJs('assets/demo/demo2/base/scripts.bundle.js').then(() => {
         loadJs('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js').then(() => {
           loadJs('assets/app/js/dashboard.js').then(() => {
+            loadJs('assets/demo/default/custom/components/calendar/basic.js'); //JS for basic calendar  
           });
         });
       });

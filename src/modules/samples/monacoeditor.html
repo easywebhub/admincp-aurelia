@@ -12,9 +12,9 @@
         <i class="flaticon-exclamation m--font-brand"></i>
       </div>
       <div class="m-alert__text">
-        <h2>CKEditor 5 Builds</h2>
-        <h3>The fastest and easiest way to integrate a rich text editor into your application.</h3>
-        <p>&nbsp;</p>
+        <p>The Monaco Editor is the code editor that powers
+          <a href="https://github.com/Microsoft/vscode">VS Code</a>, a good page describing the code editor's features is
+          <a href="https://code.visualstudio.com/docs/editor/editingevolved">here</a>.</p>
       </div>
     </div>
     <div class="m-portlet">
@@ -32,14 +32,25 @@
         </div>
       </div>
       <div class="m-portlet__body">
-        <h3>CKeditor 5</h3>
-        <label>Value: ${ckEditorValue}</label>
-        <div>
-          <textarea ckeditor5="id.bind: ckId" value.bind="ckEditorValue"></textarea>
+        <label> Value: ${monacoEditorValue}</label>
+        <h3>Monaco Editor </h3>
+        <!-- <div ref="editorHost" id="container" style="height:100%;"></div> -->
+        <div monacoeditor="data.bind: monacoEditorValue; options.bind: ''" style="height:500px;border: solid 1px black"></div>
+        <button click.delegate="getMonaco()">Get Value</button>
+      </div>
+      <div class="m-portlet__foot m--hide">
+        <div class="row">
+          <div class="col-lg-6">
+            Portlet footer:
+          </div>
+          <div class="col-lg-6">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <span class="m--margin-left-10">or
+              <a href="#" class="m-link m--font-bold">Cancel</a>
+            </span>
+          </div>
         </div>
-        <button click.delegate="log()">test binding</button>
       </div>
     </div>
   </div>
-
 </template>
