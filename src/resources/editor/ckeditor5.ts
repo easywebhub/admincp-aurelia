@@ -9,9 +9,11 @@ export class CkEditor5Attribute {
     constructor(private element) {
     }
     attached() {
+      // https://docs.ckeditor.com/ckeditor5/latest/features/image-upload.html  
+      
       ClassicEditor
       .create( this.element, {
-        toolbar: [ 'headings', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+        toolbar: [ 'headings', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' , 'imageTextAlternative', '|', 'imageStyleFull', 'imageStyleSide', 'insertImage'],
         heading: {
             options: [
                 { modelElement: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
