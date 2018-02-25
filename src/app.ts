@@ -18,7 +18,7 @@ export class App {
     
     config.map([
       {
-        route: 'login', name: 'login', moduleId: PLATFORM.moduleName('./modules/login'), nav: true, title: 'Welcome',
+        route: ['','login'], name: 'login', moduleId: PLATFORM.moduleName('./modules/login'), nav: true, title: 'Welcome',
         settings: { icon: 'pg-home' }
       },
       {

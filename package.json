@@ -100,6 +100,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^1.0.0-alpha.2",
+    "@ckeditor/ckeditor5-image": "^1.0.0-alpha.2",
     "@timkendrick/monaco-editor": "0.0.7",
     "aurelia-bootstrap-datetimepicker": "^1.0.11",
     "aurelia-bootstrapper": "2.1.1",
