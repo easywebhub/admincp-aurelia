@@ -1,16 +1,27 @@
 <template>
-    <section class="au-animate container">
-        <h2>DateTimePicker</h2>
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <abp-datetime-picker options.bind="{ format: 'MMM Do YY, h:mm:ss' , locale: 'vi' }" model.bind="lbStandardDate"></abp-datetime-picker>
+      <!-- begin::Body -->
+  
+        <div class="m-content">
+          <!--begin:: Widgets/Stats-->
+          <div class="m-portlet ">
+            <div class="m-portlet__body  m-portlet__body--no-padding">
+              <h2>DateTimePicker</h2>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <abp-datetime-picker options.bind="{ format: 'MMM Do YY, h:mm:ss' , locale: 'vi' }" model.bind="lbStandardDate"></abp-datetime-picker>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">String: ${date1.date}</div>
+                <div class="col-md-6 col-sm-6">ValueFormat Date: ${lbStandardDate | dateFormat}</div>
+                <div class="col-md-6 col-sm-6">Standard Date: ${lbStandardDate}</div>
+              </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-6">String: ${date1.date}</div>
-            <div class="col-md-6 col-sm-6">ValueFormat Date: ${lbStandardDate | dateFormat}</div>
-            <div class="col-md-6 col-sm-6">Standard Date: ${lbStandardDate}</div>
-        </div>
-    </section>
-    
 </template>

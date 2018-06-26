@@ -1,5 +1,45 @@
 <template>
-    <section>
-        <h1>Comming Soon!</h1>
-    </section>
+  <!-- https://stackoverflow.com/questions/46559354/how-to-set-the-height-of-ckeditor-5-classic-editor   -->
+  <style>
+    .ck-editor__editable {
+      min-height: 400px;
+    }
+  </style>
+  <div class="m-content">
+
+    <div class="m-alert m-alert--icon m-alert--air m-alert--square alert alert-dismissible m--margin-bottom-30" role="alert">
+      <div class="m-alert__icon">
+        <i class="flaticon-exclamation m--font-brand"></i>
+      </div>
+      <div class="m-alert__text">
+        <h2>CKEditor 5 Builds</h2>
+        <h3>The fastest and easiest way to integrate a rich text editor into your application.</h3>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <div class="m-portlet">
+      <div class="m-portlet__head">
+        <div class="m-portlet__head-caption">
+          <div class="m-portlet__head-title">
+            <span class="m-portlet__head-icon">
+              <i class="flaticon-multimedia"></i>
+            </span>
+            <h3 class="m-portlet__head-text">
+              Icon Title
+              <small>portlet sub title</small>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="m-portlet__body">
+        <h3>CKeditor 5</h3>
+        <label>Value: ${ckEditorValue}</label>
+        <div>
+          <textarea ckeditor5="id.bind: ckId" value.bind="ckEditorValue"></textarea>
+        </div>
+        <button click.delegate="log()">test binding</button>
+      </div>
+    </div>
+  </div>
+
 </template>

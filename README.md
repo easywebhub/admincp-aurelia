@@ -1,3 +1,13 @@
+## Metronic Customization
+
+- hotfix js 
+  - viết function loadJS() để gọi các js theo thứ tự `vendors.bundle.js`, `scripts.bundle.js`, `fullcalendar.bundle.js`, `dashboard.js`
+
+  - commit https://github.com/easywebhub/admincp-aurelia/commit/9ec3a3b0883cf00eb939d6eed8bfc9f8ece4f079
+  
+- Hot fix font : 
+  - <link href="assets/demo/demo2/base/style.bundle.css" rel="stylesheet" type="text/css"> để load sau cùng
+  - commit https://github.com/easywebhub/admincp-aurelia/commit/5dbfe1a76f638bea293f2e5c7c011de8e7f60eb0
 ## EasyWeb Customization
 
 - thêm vào aurelia-configuration, tham khảo https://ilikekillnerds.com/2015/09/aurelia-configuration/
@@ -12,6 +22,9 @@
   - jstree aurelia-jstree, tham khảo
     - https://www.npmjs.com/package/aurelia-jstree, 
     - https://www.jstree.com/
+
+  - aurelia-v-grid: https://vegarringdal.gitbooks.io/dev-rebuild/content/
+    
 
 - other plugins
   - axios
@@ -62,6 +75,16 @@ From the project folder, execute the following commands:
 ```shell
 npm install # or: yarn install
 ```
+
+```
+npm start -- build
+```
+
+### Copy vào thư mục /dist
+
+- copy các thư mục cần thiết vào `/dist` 
+  - `/config`
+  - `/src/assets`
 
 This will install all required dependencies, including a local version of Webpack that is going to
 build and bundle the app. There is no need to install Webpack globally. 

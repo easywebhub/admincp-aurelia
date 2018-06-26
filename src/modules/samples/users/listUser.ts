@@ -10,11 +10,11 @@ const $ = PLATFORM.global.$
 @inject(DialogService)
 export class ListUser {
 
-  selectedItem : User; 
-  constructor(private dialogService: DialogService) {}
+  selectedItem: User;
+  constructor(private dialogService: DialogService) { }
 
   activate() {
- 
+
   }
 
   async runCreate() {
@@ -24,14 +24,28 @@ export class ListUser {
       if (!result.wasCancelled) {
         this.selectedItem = result.output;
       } else {
-            logger.debug("runCreate()", this.selectedItem);
-            logger.info("Cancel");
-        }
+        logger.debug("runCreate()", this.selectedItem);
+        logger.info("Cancel");
+      }
     });
-}
+  }
 
-  
+
   attached() {
-   
+
+  }
+
+  getFakeUsers(): Array<User> {
+    let users = new Array<User>(); 
+    let user = new User(); 
+    user.username = 'User A';
+    user.email = 'userA@easywebhub.com';
+    users.push(user) ;   
+
+    user.username = 'User B';
+    user.email = 'userB@easywebhub.com';
+    users.push(user); 
+    
+    return users;     
   }
 }    
